@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+    background-color: darkgray;
+}
+
+.container {
+    border: 1px solid black;
+    width: calc(100% - 350px);
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.cubos {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 24px;
+}
+
+.cubos:hover {
+    background-color: red;
+    transition: 1.5s;
+}
