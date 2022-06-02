@@ -1,6 +1,4 @@
-.apostas {
-    
-}
+
 
 .placar-E, .placar-D {
     width: 35px;
@@ -17,22 +15,17 @@ table {
     /* width: 800px; */
 }
 
-caption {
-    font-size: 1.2em;
-    font-weight: bolder;
-    padding: 20px;
-}
-
-thead,
+/* thead,
 .title {
     background-color: gray;
     color: white;
-}
+} */
 
 th, td {
     border: 1px solid black;
-    padding: 10px;
+    padding: 3px;
     text-align: center;
+    font-size: 14px;
 }
 
 tbody>tr:nth-child(even) {
@@ -43,14 +36,40 @@ tbody>tr:nth-child(odd) {
     background-color: white;
 }
 
-
-#Q {
-    border: 1px solid black;
-    width: 50px;
+h3 {
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.159);
+    box-shadow: 1px 2px 7px black;
 }
 
-#T {
+.linha {
+    color: rgba(128, 128, 128, 0.01);
+    box-shadow: 1px 2px 7px;
+}
+
+#centroA {
+    border: 1px solid rgba(96, 96, 96, 0.311);
+}
+
+#apostas {
+    margin-top: 10px;
+}
+
+#inputNome {
+    width: 75%;
+}
+
+#aposteA {
     border: 1px solid black;
-    height: 50px;
-    
+    display: inline-block;
+    width: 85%;
+    align-items: flex-end;
+}
+
+#aposteB {
+    border: 1px solid black;
+    width: 85%;
+    display: inline-block;
 }
