@@ -18,7 +18,7 @@
         <!--================================= CONTAINER =================================-->
 
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <div class="navbar-brand"><img src="images/favicon.ico" alt=""> </div>
+            <div class="navbar-brand"><img src="" alt=""> </div>
     
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
                 <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
             </div>
         </nav>
         <div>
-            <h3>Oitavas de Final da Libertadores da América 2022</h3>
+            <h3 style="color: white">Bolão Libertadores 2022</h3>
         </div>
         <div id="apostas"> 
             <!--================================= APOSTAS =================================-->                
@@ -45,50 +45,37 @@
                     <thead>
                         <!-- <tr>
                             <th>TIMES ESQUERDA</th>
-                            <th>TIMES ESQUERDA</th>
-                            <th>TIMES ESQUERDA</th>
-                            <th>TIMES ESQUERDA</th>
-                            <th>TIMES ESQUERDA</th>
-                            <th>TIMES ESQUERDA</th>
-                            <th>TIMES ESQUERDA</th>
-                            <th>TIMES ESQUERDA</th>
-                            <th>TIMES ESQUERDA</th>
                         </tr> -->
                     </thead>
                     <tbody>
                         <tr>
                             <td style="width:12%">Athlético PR</td>
-                            <td style="width:10%"><input class="placar-E" type="text"></td>
+                            <td style="width:10%"><input id="pl1" class="placar-E" type="number"></td>
                             <td style="width:50%" rowspan="11" id="centroA">
-                                <!-- <div id="aposteA">
+                                <div id="aposteA">
                                     <div id="inputNome">
-                                        <label for="formGroupExampleInput" class="form-label">Nome</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do Apostador">
+                                        <!-- <label for="formGroupExampleInput" class="form-label">Nome</label> -->
+                                        <input type="text" class="form-control" id="formGroupExampleInput nameApost" placeholder="Nome do Apostador">
                                     </div>
-                                    <div>
-                                        <button class="btn btn-primary">Apostar</button>
+                                    <div class="d-grid gap-2" id="botao">
+                                        <button onclick="apostar()" class="btn btn-primary">Apostar</button>
                                     </div>
                                 </div>
                                 <div id="aposteB">
-                                    <h1>OI</h1>
-                                    <h1>OI</h1>
-                                    <h1>OI</h1>
-                                    <h1>OI</h1>
-                                    <h1>OI</h1>
-                                    <h1>OI</h1>
-                                </div> -->
+                                    
+                                </div>
                             </td>
-                            <td style="width:10%"><input class="placar-D" type="text"></td>
+                            <td style="width:10%"><input class="placar-D" type="number"></td>
                             <td style="width:12%">Deportivo Tolima</td>
                         </tr>
                         <tr>
                             <td>Libertad</td>
-                            <td><input class="placar-E" type="text"></td>
+                            <td><input id="pl2" class="placar-E" type="number"></td>
                             <!-- <td rowspan="3" id="T"></td>
                             <td></td>
                             <td></td>
                             <td></td> -->
-                            <td><input class="placar-D" type="text"></td>
+                            <td><input class="placar-D" type="number"></td>
                             <td>Flamengo</td>
                         </tr>
                         <tr>
@@ -104,24 +91,24 @@
                         </tr>
                         <tr>
                             <td>Fortaleza</td>
-                            <td><input class="placar-E" type="text"></td>
+                            <td><input class="placar-E" type="number"></td>
                             <!-- <td></td> -->
                             <!-- <td></td>
                             <td></td>
                             <td></td>
                             <td></td> -->
-                            <td><input class="placar-D" type="text"></td>
+                            <td><input class="placar-D" type="number"></td>
                             <td>Corinthians</td>
                         </tr>
                         <tr>
                             <td>Estudiantes</td>
-                            <td><input class="placar-E" type="text"></td>
+                            <td><input class="placar-E" type="number"></td>
                             <!-- <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td> -->
-                            <td><input class="placar-D" type="text"></td>
+                            <td><input class="placar-D" type="number"></td>
                             <td>Boca Juniors</td>
                         </tr>
                         <tr>
@@ -137,24 +124,24 @@
                         </tr>
                         <tr>
                             <td>Emelec</td>
-                            <td><input class="placar-E" type="text"></td>
+                            <td><input class="placar-E" type="number"></td>
                             <!-- <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td> -->
-                            <td><input class="placar-D" type="text"></td>
+                            <td><input class="placar-D" type="number"></td>
                             <td>Vélez</td>
                         </tr>
                         <tr>
                             <td>Atlético MG</td>
-                            <td><input class="placar-E" type="text"></td>
+                            <td><input class="placar-E" type="number"></td>
                             <!-- <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td> -->
-                            <td><input class="placar-D" type="text"></td>
+                            <td><input class="placar-D" type="number"></td>
                             <td>River Plate</td>
                         </tr>
                         <tr>
@@ -170,24 +157,24 @@
                         </tr>
                         <tr>
                             <td>Cerro Porteño</td>
-                            <td><input class="placar-E" type="text"></td>
+                            <td><input class="placar-E" type="number"></td>
                             <!-- <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td> -->
-                            <td><input class="placar-D" type="text"></td>
+                            <td><input class="placar-D" type="number"></td>
                             <td>Talleres</td>
                         </tr>
                         <tr>
                             <td>Palmeiras</td>
-                            <td><input class="placar-E" type="text"></td>
+                            <td><input class="placar-E" type="number"></td>
                             <!-- <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td> -->
-                            <td><input class="placar-D" type="text"></td>
+                            <td><input class="placar-D" type="number"></td>
                             <td>Cólon</td>
                         </tr>
                     </tbody>
@@ -204,6 +191,8 @@
         <!--================================= CONTAINER =================================-->
     </div>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
