@@ -1,18 +1,24 @@
 
-
-.placar-E, .placar-D {
-    width: 35px;
-    text-align: center;
+.root {
+    background-color: rgba(45, 57, 115, 0.704);
 }
-
 
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+    box-shadow: 1px 2px 5px black;
+}
+
 table {
     border-collapse: collapse;
     /* width: 800px; */
+}
+
+.placar-E, .placar-D {
+    width: 35px;
+    text-align: center;
 }
 
 /* thead,
@@ -38,9 +44,10 @@ tbody>tr:nth-child(odd) {
 
 h3 {
     padding: 15px;
+    color: rgb(190, 7, 7);
     font-size: 16px;
     text-align: center;
-    background-color: rgba(255, 0, 0, 0.159);
+    background-color: rgba(45, 57, 115, 0.704);
     box-shadow: 1px 2px 7px black;
 }
 
@@ -58,14 +65,16 @@ h3 {
 }
 
 #inputNome {
-    width: 75%;
+    width: auto;
+    margin: 7px;
 }
 
 #aposteA {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: inline-block;
-    width: 85%;
+    width: 50%;
     align-items: flex-end;
+    padding: 15px;
 }
 
 #aposteB {
@@ -73,3 +82,8 @@ h3 {
     width: 85%;
     display: inline-block;
 }
+
+#botao {
+    margin: 7px;
+}
+
