@@ -11,3 +11,12 @@ function starter() {
 
     document.getElementById("startTempera").style.display = 'none'
 }
+
+const btn = document.querySelector('#send')
+
+btn.addEventListener("click", function(e){
+    e.preventDefault()
+    const question1 = document.getElementsByName('q1')
+    let que1 = question1.value
+    console.log(que1)
+})
