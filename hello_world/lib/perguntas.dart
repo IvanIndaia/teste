@@ -3,7 +3,7 @@ class Pergunta {
   final List<String> alternativas;
   final indiceAlternativaCorreta;
 
-  int indiceAlternativaErrada = -1;
+  int indiceAlternativaSelecionada = -1;
 
   Pergunta(
       this.textoDaPergunta, this.alternativas, this.indiceAlternativaCorreta);
