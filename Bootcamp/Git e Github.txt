@@ -1,0 +1,70 @@
+GIT
+
+O que vamos aprender?
+
+Mudar de pastas
+Listar as pastas
+Criar pastas/arquivos
+Deletar pastas/arquivos
+
+* Windows
+	cd
+	dir
+	mkdir
+	del/rmdir
+
+* Unix
+	cd
+	ls
+	mkdir
+	rm -rf
+
+
+Entendendo como o GIT funciona
+
+	* SHA1
+	* Objetos fundamentais
+	* Sistema distribuído
+	* Segurança
+	
+* Sha1
+	(Secure Hash Algorithim - NSA).
+	É um algoritmo de encriptografia.
+	Conjunto de caracter de 40 dígitos.
+	Ele é um forma curta de representar um arquivo.
+	
+	
+ivan.alex@TKLCLSN07 MINGW64 ~/Desktop
+$ openssl sha1 texto.txt
+SHA1(texto.txt)= 789c98c6530cda26ede6434ab84eeb30777dc57d
+
+ivan.alex@TKLCLSN07 MINGW64 ~/Desktop
+$ openssl sha1 texto.txt
+SHA1(texto.txt)= e16b3bf694509fe0eea7fea549b6faaa8ccd11d7
+
+
+
+Encriptando uma string pelo GIT
+ivan.alex@TKLCLSN07 MINGW64 ~/Desktop
+$ echo 'conteudo' | git hash-object --stdin
+
+Encriptando uma string pelo OpenSSL
+$ echo -e 'conteudo' | openssl sha1
+ou
+$ echo -e 'blob \conteudo' | openssl sha1
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
