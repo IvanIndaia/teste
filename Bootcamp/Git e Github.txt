@@ -1,4 +1,6 @@
-GIT
+-----------------
+| GIT E GITHUB	|	
+-----------------
 
 O que vamos aprender?
 
@@ -27,6 +29,7 @@ Entendendo como o GIT funciona
 	* Sistema distribuído
 	* Segurança
 	
+
 * Sha1
 	(Secure Hash Algorithim - NSA).
 	É um algoritmo de encriptografia.
@@ -55,8 +58,36 @@ $ echo -e 'blob \conteudo' | openssl sha1
 	
 	
 	
-	
-	
+* Chave SSH e Token
+
+	Gerar chave SSH no Git
+		ivan.alex@TKLCLSN07 MINGW64 ~
+		$ ssh-keygen -t ed25519 -C ivan.indaia@gmail.com
+		Generating public/private ed25519 key pair.
+		Enter file in which to save the key (/c/Users/ivan.alex/.ssh/id_ed25519):
+
+		ivan.alex@TKLCLSN07 MINGW64 ~
+		$ cd c/Users/ivan.alex/
+		bash: cd: c/Users/ivan.alex/: No such file or directory
+
+		ivan.alex@TKLCLSN07 MINGW64 ~
+		$
+
+		ivan.alex@TKLCLSN07 MINGW64 ~
+		$ cd c/Users/ivan.alex/.ssh
+		bash: cd: c/Users/ivan.alex/.ssh: No such file or directory
+
+		ivan.alex@TKLCLSN07 MINGW64 ~
+		$ cd /c/Users/ivan.alex/.ssh
+
+		ivan.alex@TKLCLSN07 MINGW64 ~/.ssh
+		$ ls
+		id_ed25519  id_ed25519.pub
+
+		ivan.alex@TKLCLSN07 MINGW64 ~/.ssh
+		$ cat id_ed25519.pub
+		ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPWHOEoGmAAyXZCKVuOTTzxbR2IF/eWFbCIgojc5ezVL ivan.indaia@gmail.com
+
 	
 	
 	
