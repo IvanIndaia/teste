@@ -1,0 +1,78 @@
+
+/* ======================================================================== */
+/* CORPO */
+
+
+
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: rgb(59, 118, 196);
+    text-shadow: 2px 2px 2px black;
+    font-size: 27pt;
+}
+
+/* ======================================================================== */
+/* FORMULÁRIO */
+
+div#formu {
+    background-color: #5519191c;
+    max-width: 1000px;
+    width: auto;
+    padding: 35px;
+    margin: auto;
+    left: 350px;
+    color: rgb(2, 0, 0);
+    border-radius: 10px;
+    position: absolute;
+    line-height: 25pt;
+}
+
+div#formu h4 {
+    font-size: 10pt;
+    color: black;
+    line-height: 10px;
+}
+
+div#formu a:hover {
+    color: rgba(253, 2, 2, 0.603);
+    transition: 0.5s;
+}
+
+div#formu input {
+    transform: scale(1.4);
+}
+
+div#formu div.nsd { 
+    margin-left: 10px;
+}
+
+span.margin-item {
+    margin-left: 10px;
+}
+
+/* ======================================================================== */
+/* BOTÃO */
+div.butto {   
+    padding: 5px; 
+    display: inline-block;
+
+}
+
+div.butto :hover {
+    transition: 2s;
+    background-color: #2b6fc9;
+    color: rgb(252, 248, 248);
+}
+/*
+div.nsd {    
+  
+    width: auto;
+    display: inline-block;
+    position: relative;
+    color: white;
+    text-align: left;
+    left: 0;
+    */
+    
+}
