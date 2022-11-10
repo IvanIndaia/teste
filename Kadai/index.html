@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Responsivas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            /* width: 800px; */
+        }
+
+        caption {
+            font-size: 1.2em;
+            font-weight: bolder;
+            padding: 20px;
+        }
+
+        thead,
+        .title {
+            background-color: gray;
+            color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        tbody>tr:nth-child(even) {
+            background-color: rgba(202, 201, 201, 0.555);
+        }
+
+        tbody>tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        #container {
+            overflow-x: auto;
+        }
+
+        input { 
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kadai List</h1>
+    <p>Lista de Pendências do Projeto de Implantação do TMS WEB.</p>
+
+    <input type="button" value="Inserir Item">
+    <br> <br>
+
+    <label for="">Número: </label>
+    <input type="number">
+    <br><br>
+    <label for="">Descrição: </label>
+    <input type="text">
+    <br><br>
+    <label for="">Impacto Go-Live: </label>
+    <input type="text">
+    <br><br>
+    <label for="">Tipo: </label>
+    <input type="text">
+    <br><br>
+    <label for="">Responsaável: </label>
+    <input type="text">
+    <br><br>
+    <label for="">Prazo: </label>
+    <input type="date">
+    <br><br>
+    <label for="">Follow-Up: </label>
+    <input type="text">
+    <br><br>
+    <label for="">Status: </label>
+    <input type="search">
+
+    <div id="container">
+        <table>
+            <caption>TMS WEB - 2022</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Área</th>
+                    <th>Decrição</th>
+                    <th>Impacto Go-Live?</th>
+                    <th>Tipo</th>
+                    <th>Responsável</th>
+                    <th>Prazo</th>
+                    <th>Follow-up</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>07</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>06</td>
+                    <td>01</td>
+                    <td>05</td>
+                    <td>12</td>
+                    <td>04</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>07</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>06</td>
+                    <td>01</td>
+                    <td>05</td>
+                    <td>12</td>
+                    <td>04</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>07</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>06</td>
+                    <td>01</td>
+                    <td>05</td>
+                    <td>12</td>
+                    <td>04</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
