@@ -12,7 +12,7 @@ function convertPokemonToHTML(pokemon) {
 
         <div class="detail">
             <ol class="types">
-                ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join('')}
+                ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 <li class="type">poson</li>
             </ol>
 
