@@ -1,12 +1,20 @@
 console.log('Sucesso!')
+const pokeOl =  document.getElementById('pokeId')
+const loadMoreButton = document.getElementById('loadMore')
 
-// function convertPokemonTypesToLi(pokemonTypes) {
-//     return pokemonTypes.map((typeSlot) => `<li class="type">${type.name}</li>`)
+const maxRecords = 251
+const limit = 10
+let offset = 0
+
+// function innit() {
+//     const maxRecords = prompt("Digite a quantidade limite de POKEMONS: ")
 // }
 
-function convertPokemonToHTML(pokemon) {
-    return `
-    <li class="pokemon ${pokemon.type}">
+function loadPokemonItens(offset, limit) {
+
+    pokeAPI.getPokemons(offset, limit).then((pokemons = []) => {  
+        const newHTML = pokemons.map((pokemon) => `
+        <li class="pokemon ${pokemon.type}">
         <span class="number">#${pokemon.number}</span>
         <span class="name">${pokemon.name}</span>
 
@@ -18,23 +26,30 @@ function convertPokemonToHTML(pokemon) {
 
             <img src="${pokemon.photo}" alt="${pokemon.name}">
         </div>
-    </li>
-    `
+		</li>
+
+        `).join('')
+
+        pokeOl.innerHTML += newHTML
+
+    })
+
+      
 }
 
-const pokeOl =  document.getElementById('pokeId')
+loadPokemonItens(offset, limit)
 
+loadMoreButton.addEventListener('click', () => {
+    offset += limit
+    const qtdRecords = offset + limit
+    
 
-pokeAPI.getPokemons().then((pokemonList = []) => {
-        
-    pokeOl.innerHTML += pokemonList.map(convertPokemonToHTML).join('')
+    if (qtdRecords >= maxRecords){
+        const newLimit = maxRecords - offset
+        loadPokemonItens(offset, limit)
 
-    // OU use o FOR - Mais códigos
-    // for (let i = 0; i < pokemonList.length; i++) {
-    //     const poke = pokemonList[i];
-    //     console.log(poke)
-    //     listItems.push(convertPokemonToHTML(poke))
-    // }
-
+        loadMoreButton.parentElement.removeChild(loadMore)
+    }else {
+        loadPokemonItens(offset, limit)
+    }
 })
-.finally(() => console.log("Requisição Concluída!"))   
