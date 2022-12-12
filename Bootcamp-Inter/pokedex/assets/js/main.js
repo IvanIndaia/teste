@@ -53,3 +53,8 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    
+}
