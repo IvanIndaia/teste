@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdEmail, MdLock } from 'react-icons/md'
+import { MdEmail, MdLock, MdAccountCircle } from 'react-icons/md'
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -12,14 +12,14 @@ import { Input } from "../../components/Input";
 
 import { api } from '../../services/api';
 
-import { Column,  Container, CriarText, EsqueciText, Row, SubTitleLogin, Title, TitleLogin, Wrapper} from './styles';
+import { Column,  Container, CriarText, EsqueciText, Row, SubTitleLogin, SubTitleRegister, Title, TitleLogin, Wrapper} from './styles';
 
 const schema = yup.object({
     email: yup.string().email('Email não é válido!').required('Campo obrigatório!'),
     password: yup.string().min(3, 'No minimo 3 caracteres!').required('Campo obrigatório!'),
   }).required();
 
-const Login = () => {
+const Cadastro = () => {
 
     const navigate = useNavigate();
 
@@ -42,9 +42,8 @@ const Login = () => {
         }
     }
 
-
     const handleClickSignIn = () => {
-        navigate('/feed')
+        navigate('/login')
     }
 
     return (<> 
@@ -57,18 +56,24 @@ const Login = () => {
         </Column>
         <Column> 
             <Wrapper>
-                <TitleLogin>Faça seu login</TitleLogin>
-                <SubTitleLogin>Faça seu login e make the change._</SubTitleLogin>
+                <TitleLogin>Comece agora grátis</TitleLogin>
+                <SubTitleLogin>Crie sua conta e make the change._</SubTitleLogin>
                 <form onSubmit={handleSubmit(onSubmit)}>
+                    <Input name="nome" errorMessage={errors?.email?.message} control={control} placeholder="Nome Completo" leftIcon={<MdAccountCircle />} />
+
                     <Input name="email" errorMessage={errors?.email?.message} control={control} placeholder="e-mail" leftIcon={<MdEmail />} />
+                    
                     <Input name="password" errorMessage={errors?.password?.message} control={control} placeholder="senha" type="password" leftIcon={<MdLock />} />
-                    <Button title="Entrar" variant="secondary" type="submit"/>
-                    {/* onClick={handleClickSignIn} */}
+                    
+                    <Button title="Criar a minha conta" variant="secondary" type="submit"/>
                 </form>
-                <Row>
-                    <EsqueciText>Esqueci minha senha</EsqueciText>
-                    <CriarText>Criar conta</CriarText>
-                </Row>
+                <Column>
+                    <SubTitleRegister>Ao clicar em "criar minha conta grátis", declaro que ceito as Políticas de Privacidade e os Termos de Uso da DIO.</SubTitleRegister><br />
+                    <Row>
+                        Já tenho conta.  <CriarText onClick={handleClickSignIn}> Fazer login</CriarText>
+                    </Row>
+                    
+                </Column>
             </Wrapper>
         </Column>
     </Container>
@@ -76,4 +81,4 @@ const Login = () => {
    </>)
 }
 
-export { Login }
+export { Cadastro }
