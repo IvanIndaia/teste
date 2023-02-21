@@ -6,7 +6,7 @@ public class Usuario {
         smartTV.ligar();
         smartTV.mudarCanal(12);
 
-        System.out.println("TV ligada: " + smartTV.ligada);
+        System.out.println("TV ligadas: " + smartTV.ligada);
         System.out.println("No canal: " + smartTV.canal);
         System.out.println("Com volume: " + smartTV.volume);
 
