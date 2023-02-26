@@ -1,3 +1,5 @@
+package Study.src.Study;
+
 import java.util.Scanner;
 
 public class Consoantes {

@@ -1,4 +1,5 @@
-import java.util.Scanner;
+package Study.src.Study;
+
 import java.util.Random;
 
 public class NumerosAleatorios {
