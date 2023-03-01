@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Plantão TI</title>
+
+    <!-- NORMALIZE CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,34 +25,92 @@
     </header>
     <div class="corpo">
         <div class="tkcenter">
-            <a href="https://external-link.holmesdoc.io/portals/6292c06f3029781552eb24c6" target="_blank"><img src="images/Portal_TKHolmes.png" alt=""></a>
+            <a href="https://external-link.holmesdoc.io/portals/6292c06f3029781552eb24c6"
+                target="_blank"><img src="images/Portal_TKHolmes.png" alt=""></a>
         </div>
-        <h3> Horário de Plantão</h3>
-        <div id="informativo">
-                <p> O atendimento do <strong> Plantão de TI</strong> ocorre de <u>segunda</u> à <u>sexta</u>
-                    das <t class="ver">00h00</t> às <t class="ver">06h00</t>, <u>sábado</u>, <u>domingo</u> e <u>feriados</u> <t class="ver">24h</t>.
-                </p>
-                <h3>Acionamento do Plantonista</h3>
-                <p>
-                   <!-- 
-                       O atendimento de TI ocorre de segunda à sexta
-                    das 06h30m às 00h00. Fora do horário de atendimento,
-                    regisre o seu chamado, em caso de falhas críticas
-                    consultar a escala de plantonistas.
-                   -->
-                    O atendimento do plantonista de TI ocorre para atendimento com <strong> falhas críticas</strong> na 
-                    <strong>infraestrutura</strong> ou <strong>sistemas</strong>. <br>
-                    Se o seu problema não estiver afetando a operação, registre um chamado e aguarde o atendimento de acordo com os SLA's.
-                </p>
-                <br>
-                <picture id="plantonista">
-                    <img src="images/plantonistas/Plantonista.jpg" alt="" width="720px">
-                </picture>
-        </div>
+        <!---------------------- SECTION ---------------------->
+        <section id="home">
+            <!-- <h1>PLANTÃO TKL</h1> -->
+            <div class="border-none abas">
+                <ul class="nav nav-tabs justify-content-left">
+                    <li class="nav-item"><a href="#ti" class="nav-link active" data-toggle="tab">Plantão TI</a></li>
+                    <li class="nav-item"><a href="#rh" class="nav-link" data-toggle="tab">Plantão RH</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="ti" class="tab-pane active">
+                        
+                        <h3> Horário de Plantão</h3>
+                        <div id="informativo">
+                            <p> O atendimento do <strong> Plantão de TI</strong> ocorre de <u>segunda</u> à <u>sexta</u>
+                                das <t class="ver">00h00</t> às <t class="ver">06h00</t>, <u>sábado</u>, <u>domingo</u>
+                                e
+                                <u>feriados</u>
+                                <t class="ver">24h</t>.
+                            </p>
+                            <h3>Acionamento do Plantonista</h3>
+                            <p>
+                                <!-- 
+                                   O atendimento de TI ocorre de segunda à sexta
+                                das 06h30m às 00h00. Fora do horário de atendimento,
+                                regisre o seu chamado, em caso de falhas críticas
+                                consultar a escala de plantonistas.
+                               -->
+                                O atendimento do plantonista de TI ocorre para atendimento com <strong> falhas
+                                    críticas</strong> na
+                                <strong>infraestrutura</strong> ou <strong>sistemas</strong>. <br>
+                                Se o seu problema não estiver afetando a operação, registre um chamado e aguarde o
+                                atendimento de acordo
+                                com os SLA's.
+                            </p>
+                            <br>
+                            <picture id="plantonista">
+                                <img src="images/plantonistas/PlantonistaTI.jpg" alt="" width="720px">
+                            </picture>
+                        </div>
+                    </div>
+                    <div id="rh" class="tab-pane fade">
+                        <h3> Horário de Plantão</h3>
+                        <div id="informativo">
+                            <p> O atendimento do <strong> Plantão do RH</strong> ocorre aos <u>Finais de Semana</u>
+                                
+                                <t class="ver">24h</t> por dia.
+                            </p>
+                            <h3>Acionamento do Plantonista</h3>
+                            <p>
+                                O atendimento do plantonista do RH ocorre para: <strong> Solicitações de taxi/fretado, refeições</strong> 
+                                e assuntos <strong> urgentes </strong> relacionados ao RH.
+                            </p>
+                            <br>
+                            <picture id="plantonista">
+                                <img src="images/plantonistas/PlantonistaRH.jpg" alt="" width="720px">
+                            </picture>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
+
+    <!---------------------- FOOTER ---------------------->
     <footer class="rodape">
         Governança de TI - Copyright &copy; TK Logística do Brasil
     </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
